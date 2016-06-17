@@ -17,6 +17,9 @@
 		45202C1B1D14445200E59561 /* GEtestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C1A1D14445200E59561 /* GEtestTests.m */; };
 		45202C261D14445200E59561 /* GEtestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C251D14445200E59561 /* GEtestUITests.m */; };
 		45202C351D1447C200E59561 /* UIImageView+UIActivityIndicatorForSDWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C341D1447C200E59561 /* UIImageView+UIActivityIndicatorForSDWebImage.m */; };
+		45202C421D144B4500E59561 /* HttpSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C411D144B4500E59561 /* HttpSessionManager.m */; };
+		45202C461D144BC900E59561 /* APIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C451D144BC900E59561 /* APIService.m */; };
+		45202C4D1D14545A00E59561 /* PathDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C4C1D14545A00E59561 /* PathDataService.m */; };
 		A9DAA76C6973FA31B5C042AA /* libPods-GEtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30F23D1207BCBCD3FA21FE9D /* libPods-GEtest.a */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +62,13 @@
 		45202C271D14445200E59561 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45202C331D1447C200E59561 /* UIImageView+UIActivityIndicatorForSDWebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+UIActivityIndicatorForSDWebImage.h"; sourceTree = "<group>"; };
 		45202C341D1447C200E59561 /* UIImageView+UIActivityIndicatorForSDWebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+UIActivityIndicatorForSDWebImage.m"; sourceTree = "<group>"; };
+		45202C401D144B4500E59561 /* HttpSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpSessionManager.h; sourceTree = "<group>"; };
+		45202C411D144B4500E59561 /* HttpSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpSessionManager.m; sourceTree = "<group>"; };
+		45202C431D144B6400E59561 /* APIParams.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIParams.h; sourceTree = "<group>"; };
+		45202C441D144BC900E59561 /* APIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIService.h; sourceTree = "<group>"; };
+		45202C451D144BC900E59561 /* APIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIService.m; sourceTree = "<group>"; };
+		45202C4B1D14545A00E59561 /* PathDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathDataService.h; sourceTree = "<group>"; };
+		45202C4C1D14545A00E59561 /* PathDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathDataService.m; sourceTree = "<group>"; };
 		F2571D48688544A44351F1B3 /* Pods-GEtest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GEtest.release.xcconfig"; path = "Pods/Target Support Files/Pods-GEtest/Pods-GEtest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -216,6 +226,8 @@
 		45202C3C1D14483100E59561 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				45202C471D14531F00E59561 /* APIService */,
+				45202C4E1D1455AC00E59561 /* DataServices */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -242,6 +254,27 @@
 				45202C091D14445200E59561 /* GEtest.xcdatamodeld */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		45202C471D14531F00E59561 /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				45202C431D144B6400E59561 /* APIParams.h */,
+				45202C401D144B4500E59561 /* HttpSessionManager.h */,
+				45202C411D144B4500E59561 /* HttpSessionManager.m */,
+				45202C441D144BC900E59561 /* APIService.h */,
+				45202C451D144BC900E59561 /* APIService.m */,
+			);
+			name = APIService;
+			sourceTree = "<group>";
+		};
+		45202C4E1D1455AC00E59561 /* DataServices */ = {
+			isa = PBXGroup;
+			children = (
+				45202C4B1D14545A00E59561 /* PathDataService.h */,
+				45202C4C1D14545A00E59561 /* PathDataService.m */,
+			);
+			name = DataServices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -426,7 +459,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				45202C051D14445200E59561 /* ViewController.m in Sources */,
+				45202C461D144BC900E59561 /* APIService.m in Sources */,
 				45202C021D14445200E59561 /* AppDelegate.m in Sources */,
+				45202C421D144B4500E59561 /* HttpSessionManager.m in Sources */,
+				45202C4D1D14545A00E59561 /* PathDataService.m in Sources */,
 				45202C351D1447C200E59561 /* UIImageView+UIActivityIndicatorForSDWebImage.m in Sources */,
 				45202BFF1D14445200E59561 /* main.m in Sources */,
 				45202C0B1D14445200E59561 /* GEtest.xcdatamodeld in Sources */,

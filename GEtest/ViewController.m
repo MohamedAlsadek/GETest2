@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "PathDataService.h"
+#import "APIParams.h"
 
 @interface ViewController ()
 
@@ -17,6 +19,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    PathDataService *dataService = [[PathDataService alloc] init];
+    
+    [dataService getTravelOptionsForTravelMode:TravelModeFlight Success:^(id result) {
+        NSLog(@"%@", result);
+    } failure:^(NSString *errorMsg) {
+        NSLog(@"%@" , errorMsg);
+    }];
     
 }
 
