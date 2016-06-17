@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "PathDataService.h"
 #import "APIParams.h"
+#import "Path.h"
 
 @interface ViewController ()
 
@@ -23,9 +24,15 @@
     PathDataService *dataService = [[PathDataService alloc] init];
     
     [dataService getTravelOptionsForTravelMode:TravelModeFlight Success:^(id result) {
-        NSLog(@"%@", result);
+        
+        Path *tempPath = ((NSArray *)result).firstObject;
+        
+        NSLog(@"%@", tempPath);
+        
     } failure:^(NSString *errorMsg) {
+        
         NSLog(@"%@" , errorMsg);
+        
     }];
     
 }

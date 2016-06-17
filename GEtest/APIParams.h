@@ -22,6 +22,10 @@ static NSString* const kURLFlight           = @"/w60i";
 static NSString* const kURLTrain            = @"/3zmcy";
 static NSString* const kURLBus              = @"/37yzm";
 
+#pragma mark - TravelModes
+static NSString* const kTravelModeFlight    = @"flight";
+static NSString* const kTravelModeTrain     = @"train";
+static NSString* const kTravelModeBus       = @"bus";
 
 #pragma mark - Error Handling
 static const NSInteger KBadRequestError   = 400;

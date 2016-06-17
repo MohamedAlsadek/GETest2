@@ -20,6 +20,8 @@
 		45202C421D144B4500E59561 /* HttpSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C411D144B4500E59561 /* HttpSessionManager.m */; };
 		45202C461D144BC900E59561 /* APIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C451D144BC900E59561 /* APIService.m */; };
 		45202C4D1D14545A00E59561 /* PathDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C4C1D14545A00E59561 /* PathDataService.m */; };
+		45202C531D145A1400E59561 /* Path+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C501D145A1400E59561 /* Path+CoreDataProperties.m */; };
+		45202C541D145A1400E59561 /* Path.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C521D145A1400E59561 /* Path.m */; };
 		A9DAA76C6973FA31B5C042AA /* libPods-GEtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30F23D1207BCBCD3FA21FE9D /* libPods-GEtest.a */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +71,10 @@
 		45202C451D144BC900E59561 /* APIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIService.m; sourceTree = "<group>"; };
 		45202C4B1D14545A00E59561 /* PathDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathDataService.h; sourceTree = "<group>"; };
 		45202C4C1D14545A00E59561 /* PathDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathDataService.m; sourceTree = "<group>"; };
+		45202C4F1D145A1400E59561 /* Path+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Path+CoreDataProperties.h"; sourceTree = "<group>"; };
+		45202C501D145A1400E59561 /* Path+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Path+CoreDataProperties.m"; sourceTree = "<group>"; };
+		45202C511D145A1400E59561 /* Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Path.h; sourceTree = "<group>"; };
+		45202C521D145A1400E59561 /* Path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Path.m; sourceTree = "<group>"; };
 		F2571D48688544A44351F1B3 /* Pods-GEtest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GEtest.release.xcconfig"; path = "Pods/Target Support Files/Pods-GEtest/Pods-GEtest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -252,6 +258,10 @@
 			isa = PBXGroup;
 			children = (
 				45202C091D14445200E59561 /* GEtest.xcdatamodeld */,
+				45202C4F1D145A1400E59561 /* Path+CoreDataProperties.h */,
+				45202C501D145A1400E59561 /* Path+CoreDataProperties.m */,
+				45202C511D145A1400E59561 /* Path.h */,
+				45202C521D145A1400E59561 /* Path.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -458,6 +468,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45202C541D145A1400E59561 /* Path.m in Sources */,
+				45202C531D145A1400E59561 /* Path+CoreDataProperties.m in Sources */,
 				45202C051D14445200E59561 /* ViewController.m in Sources */,
 				45202C461D144BC900E59561 /* APIService.m in Sources */,
 				45202C021D14445200E59561 /* AppDelegate.m in Sources */,
