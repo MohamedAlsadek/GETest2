@@ -28,6 +28,7 @@
 		45202C6E1D157CA800E59561 /* AbstractPagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C6D1D157CA800E59561 /* AbstractPagerViewController.m */; };
 		45202C721D157D3A00E59561 /* PagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C711D157D3A00E59561 /* PagerViewController.m */; };
 		45202C751D157EAA00E59561 /* PathListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C741D157EAA00E59561 /* PathListViewController.m */; };
+		45202C7E1D1587E900E59561 /* PathListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C7D1D1587E900E59561 /* PathListViewModel.m */; };
 		A9DAA76C6973FA31B5C042AA /* libPods-GEtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30F23D1207BCBCD3FA21FE9D /* libPods-GEtest.a */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +95,8 @@
 		45202C731D157EAA00E59561 /* PathListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathListViewController.h; sourceTree = "<group>"; };
 		45202C741D157EAA00E59561 /* PathListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathListViewController.m; sourceTree = "<group>"; };
 		45202C7A1D15803E00E59561 /* ViewModelUpdateUIDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewModelUpdateUIDelegate.h; sourceTree = "<group>"; };
+		45202C7C1D1587E900E59561 /* PathListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathListViewModel.h; sourceTree = "<group>"; };
+		45202C7D1D1587E900E59561 /* PathListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathListViewModel.m; sourceTree = "<group>"; };
 		F2571D48688544A44351F1B3 /* Pods-GEtest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GEtest.release.xcconfig"; path = "Pods/Target Support Files/Pods-GEtest/Pods-GEtest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -363,6 +366,8 @@
 			isa = PBXGroup;
 			children = (
 				45202C7A1D15803E00E59561 /* ViewModelUpdateUIDelegate.h */,
+				45202C7C1D1587E900E59561 /* PathListViewModel.h */,
+				45202C7D1D1587E900E59561 /* PathListViewModel.m */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -552,6 +557,7 @@
 				45202C541D145A1400E59561 /* Path.m in Sources */,
 				45202C721D157D3A00E59561 /* PagerViewController.m in Sources */,
 				45202C531D145A1400E59561 /* Path+CoreDataProperties.m in Sources */,
+				45202C7E1D1587E900E59561 /* PathListViewModel.m in Sources */,
 				45202C651D14DA5300E59561 /* CAPSPageMenu.m in Sources */,
 				45202C571D14A3FF00E59561 /* Reachability.m in Sources */,
 				45202C461D144BC900E59561 /* APIService.m in Sources */,
