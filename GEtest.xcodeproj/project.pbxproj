@@ -29,6 +29,8 @@
 		45202C721D157D3A00E59561 /* PagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C711D157D3A00E59561 /* PagerViewController.m */; };
 		45202C751D157EAA00E59561 /* PathListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C741D157EAA00E59561 /* PathListViewController.m */; };
 		45202C7E1D1587E900E59561 /* PathListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C7D1D1587E900E59561 /* PathListViewModel.m */; };
+		45202C811D158B3C00E59561 /* NSArray+SortPaths.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C801D158B3C00E59561 /* NSArray+SortPaths.m */; };
+		45202C851D158BDD00E59561 /* NSString+Formatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C841D158BDD00E59561 /* NSString+Formatter.m */; };
 		A9DAA76C6973FA31B5C042AA /* libPods-GEtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30F23D1207BCBCD3FA21FE9D /* libPods-GEtest.a */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +99,10 @@
 		45202C7A1D15803E00E59561 /* ViewModelUpdateUIDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewModelUpdateUIDelegate.h; sourceTree = "<group>"; };
 		45202C7C1D1587E900E59561 /* PathListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathListViewModel.h; sourceTree = "<group>"; };
 		45202C7D1D1587E900E59561 /* PathListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathListViewModel.m; sourceTree = "<group>"; };
+		45202C7F1D158B3C00E59561 /* NSArray+SortPaths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+SortPaths.h"; sourceTree = "<group>"; };
+		45202C801D158B3C00E59561 /* NSArray+SortPaths.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SortPaths.m"; sourceTree = "<group>"; };
+		45202C831D158BDD00E59561 /* NSString+Formatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Formatter.h"; sourceTree = "<group>"; };
+		45202C841D158BDD00E59561 /* NSString+Formatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Formatter.m"; sourceTree = "<group>"; };
 		F2571D48688544A44351F1B3 /* Pods-GEtest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GEtest.release.xcconfig"; path = "Pods/Target Support Files/Pods-GEtest/Pods-GEtest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -228,6 +234,7 @@
 		45202C381D1447EF00E59561 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				45202C821D158BBF00E59561 /* Categories */,
 				45202C371D1447DB00E59561 /* Utilities */,
 				45202C601D14D95400E59561 /* Constants */,
 				45202C3C1D14483100E59561 /* Services */,
@@ -370,6 +377,17 @@
 				45202C7D1D1587E900E59561 /* PathListViewModel.m */,
 			);
 			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		45202C821D158BBF00E59561 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				45202C7F1D158B3C00E59561 /* NSArray+SortPaths.h */,
+				45202C801D158B3C00E59561 /* NSArray+SortPaths.m */,
+				45202C831D158BDD00E59561 /* NSString+Formatter.h */,
+				45202C841D158BDD00E59561 /* NSString+Formatter.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -558,11 +576,13 @@
 				45202C721D157D3A00E59561 /* PagerViewController.m in Sources */,
 				45202C531D145A1400E59561 /* Path+CoreDataProperties.m in Sources */,
 				45202C7E1D1587E900E59561 /* PathListViewModel.m in Sources */,
+				45202C811D158B3C00E59561 /* NSArray+SortPaths.m in Sources */,
 				45202C651D14DA5300E59561 /* CAPSPageMenu.m in Sources */,
 				45202C571D14A3FF00E59561 /* Reachability.m in Sources */,
 				45202C461D144BC900E59561 /* APIService.m in Sources */,
 				45202C021D14445200E59561 /* AppDelegate.m in Sources */,
 				45202C421D144B4500E59561 /* HttpSessionManager.m in Sources */,
+				45202C851D158BDD00E59561 /* NSString+Formatter.m in Sources */,
 				45202C4D1D14545A00E59561 /* PathDataService.m in Sources */,
 				45202C691D14DB1C00E59561 /* AbstractNavigationController.m in Sources */,
 				45202C751D157EAA00E59561 /* PathListViewController.m in Sources */,

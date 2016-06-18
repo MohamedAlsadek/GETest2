@@ -88,51 +88,6 @@ static NSString* const kPathNumberOfStops   = @"number_of_stops";
     }
 }
 
-// sort search pathes according to search criteria
-+ (NSArray *)sortPathes:(NSArray *)pathes :(PathSorting)sortingType {
-    
-    
-    NSArray *sortedArray;
-    sortedArray = [pathes sortedArrayUsingComparator:^NSComparisonResult(id a, id b) {
-        
-        Path *firstObj = (Path *)a;
-        Path *secondObj = (Path *)b;
-        
-        // parameters used for comparing objects
-        id firstParam;
-        id secondParam;
-        
-        switch (sortingType) {
-            case PathSortingArrivalTime:{
-                firstParam = firstObj.arrivalTime;
-                secondParam = secondObj.arrivalTime;
-                
-            }
-                break;
-                
-            case PathSortingDepartureTime:{
-                firstParam = firstObj.departureTime;
-                secondParam = secondObj.departureTime;
-            }
-                break;
-                
-            case PathSortingDuration:{
-                firstParam = [Path calculatePathDuration:firstObj];
-                secondParam = [Path calculatePathDuration:firstObj];
-            }
-                break;
-                
-            default:
-                break;
-        }
-        
-        return [firstParam compare:secondParam];
-    }];
-    
-    
-    return sortedArray;
-}
-
 // get path duration by (arrivalTime - departureTime)
 + (NSNumber *)calculatePathDuration:(Path *)path {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
@@ -143,4 +98,5 @@ static NSString* const kPathNumberOfStops   = @"number_of_stops";
     NSTimeInterval timeInterval = [date2 timeIntervalSinceDate:date1];
     return [NSNumber numberWithInteger:timeInterval];;
 }
+
 @end
