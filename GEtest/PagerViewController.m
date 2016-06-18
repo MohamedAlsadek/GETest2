@@ -64,6 +64,7 @@ static NSString* const kScreenTitle = @"Berlin - Munich";
 
 #pragma mark - CAPSPageMenuDelegate
 - (void)willMoveToPage:(UIViewController *)controller index:(NSInteger)index {
+    
 }
 
 - (void)didMoveToPage:(UIViewController *)controller index:(NSInteger)index {
