@@ -35,7 +35,7 @@
     _pageMenu = [[CAPSPageMenu alloc]
                  initWithViewControllers:viewControllers
                  frame:self.view.bounds
-                 options:[parameters copy]];
+                 options:[parameters copy]];    
     _pageMenu.delegate = self ;
     
     [self addChildViewController:self.pageMenu];
@@ -43,15 +43,16 @@
 }
 
 - (NSMutableDictionary *)pagerParameters {
-    NSMutableDictionary *parameters = [@{CAPSPageMenuOptionMenuHeight: @(30.),
+    NSMutableDictionary *parameters = [@{CAPSPageMenuOptionMenuHeight: @(40.),
                                          CAPSPageMenuOptionSelectionIndicatorHeight: @(4.),
                                          CAPSPageMenuOptionMenuMargin:@(0),
-                                         CAPSPageMenuOptionUseMenuLikeSegmentedControl: @(NO),
+                                         CAPSPageMenuOptionUseMenuLikeSegmentedControl: @(YES),
+                                         
                                          // title colors
                                          CAPSPageMenuOptionSelectedMenuItemLabelColor: [UIColor whiteColor],
+                                         CAPSPageMenuOptionUnselectedMenuItemLabelColor: [UIColor whiteColor],
                                          
-                                         CAPSPageMenuOptionUnselectedMenuItemLabelColor: [UIColor colorWithRed:226/255.0 green:226/255.0 blue:226/255.0 alpha:1],
-                                         
+                                         // menu background color
                                          CAPSPageMenuOptionScrollMenuBackgroundColor: kAppBlueColor,
                                          
                                          // title fonts

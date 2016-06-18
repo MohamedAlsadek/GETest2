@@ -7,7 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Path.h"
+#import "APIParams.h"
 
 @interface PathListViewModel : NSObject
+
+
+@property (nonatomic, readonly) NSArray *allPathes;
+
+- (instancetype)initWithTravelMode:(TravelMode)travelMode delegate:(id)delegate;
+
+// Fetching data 
+- (void)fetchDataForTravelMode:(TravelMode)travelMode sortingType:(PathSorting)pathSorting;
+- (void)fetchDataForTravelMode:(TravelMode)travelMode; 
+
 
 @end
