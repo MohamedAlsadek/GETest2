@@ -10,6 +10,7 @@
 #import "PathDataService.h"
 #import "APIParams.h"
 #import "Path.h"
+#import "Reachability.h"
 
 @interface ViewController ()
 
@@ -26,9 +27,8 @@
     [dataService getTravelOptionsForTravelMode:TravelModeFlight Success:^(id result) {
         
         Path *tempPath = ((NSArray *)result).firstObject;
-        
-        NSLog(@"%@", tempPath);
-        
+        NSLog(@"live : %@", tempPath);
+
     } failure:^(NSString *errorMsg) {
         
         NSLog(@"%@" , errorMsg);

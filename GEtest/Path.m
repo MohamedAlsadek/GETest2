@@ -24,7 +24,7 @@ static NSString* const kPathNumberOfStops   = @"number_of_stops";
         self.pathId = [dict valueForKey:kPathId];
     }
     if ([dict valueForKey:kPathProviderLogo]) {
-        self.providerLogo = [dict valueForKey:kPathProviderLogo];
+        self.providerLogo = [[dict valueForKey:kPathProviderLogo] stringByReplacingOccurrencesOfString:@"{size}" withString:@"63"];
     }
     if ([dict valueForKey:kPathPriceInEuro]) {
         self.priceInEuros = [NSNumber numberWithDouble:[[dict valueForKey:kPathPriceInEuro] doubleValue]];
@@ -39,10 +39,36 @@ static NSString* const kPathNumberOfStops   = @"number_of_stops";
         self.numberOfStops = [dict valueForKey:kPathNumberOfStops];
     }
     
-    self.travelMode = [self getTravelModeString:travelMoe];
+    self.travelMode = [Path getTravelModeString:travelMoe];
 }
 
-- (NSString *)getTravelModeString:(TravelMode)travelMode {
+#pragma mark - Helper Methods
+// only insert new unique items (id)
++ (Path *)pathWithParsedDictionary:(NSDictionary *)parsedItem travelMode:(TravelMode)travelMode inManagedObjectContext:(NSManagedObjectContext *)context {
+    
+    Path *path;
+    if (parsedItem) {
+        NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Path"];
+        request.predicate = [NSPredicate predicateWithFormat:@"pathId = %@", parsedItem[@"id"]];
+        NSError *error;
+        NSArray *matches = [context executeFetchRequest:request error:&error];
+        
+        if (!matches || [matches count] > 1) {
+            NSLog(@"Multiple copies of unique item detected in the document");
+        } else if (![matches count]){
+            path = [NSEntityDescription insertNewObjectForEntityForName:@"Path"
+                                                 inManagedObjectContext:context];
+            
+            [path initWithDict:parsedItem andTravelMode:travelMode];
+        } else {
+            path = [matches lastObject];
+        }
+    }
+    return path;
+}
+
+// map TravelMode Enum to string value
++ (NSString *)getTravelModeString:(TravelMode)travelMode {
     
     switch (travelMode) {
         case TravelModeFlight:
@@ -62,5 +88,59 @@ static NSString* const kPathNumberOfStops   = @"number_of_stops";
     }
 }
 
+// sort search pathes according to search criteria
++ (NSArray *)sortPathes:(NSArray *)pathes :(PathSorting)sortingType {
+    
+    
+    NSArray *sortedArray;
+    sortedArray = [pathes sortedArrayUsingComparator:^NSComparisonResult(id a, id b) {
+        
+        Path *firstObj = (Path *)a;
+        Path *secondObj = (Path *)b;
+        
+        // parameters used for comparing objects
+        id firstParam;
+        id secondParam;
+        
+        switch (sortingType) {
+            case PathSortingArrivalTime:{
+                firstParam = firstObj.arrivalTime;
+                secondParam = secondObj.arrivalTime;
+                
+            }
+                break;
+                
+            case PathSortingDepartureTime:{
+                firstParam = firstObj.departureTime;
+                secondParam = secondObj.departureTime;
+            }
+                break;
+                
+            case PathSortingDuration:{
+                firstParam = [Path calculatePathDuration:firstObj];
+                secondParam = [Path calculatePathDuration:firstObj];
+            }
+                break;
+                
+            default:
+                break;
+        }
+        
+        return [firstParam compare:secondParam];
+    }];
+    
+    
+    return sortedArray;
+}
 
+// get path duration by (arrivalTime - departureTime)
++ (NSNumber *)calculatePathDuration:(Path *)path {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"HH:mm";
+    NSDate *date1 = [dateFormatter dateFromString:path.departureTime];
+    NSDate *date2 = [dateFormatter dateFromString:path.arrivalTime];
+    
+    NSTimeInterval timeInterval = [date2 timeIntervalSinceDate:date1];
+    return [NSNumber numberWithInteger:timeInterval];;
+}
 @end

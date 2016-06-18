@@ -22,6 +22,7 @@
 		45202C4D1D14545A00E59561 /* PathDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C4C1D14545A00E59561 /* PathDataService.m */; };
 		45202C531D145A1400E59561 /* Path+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C501D145A1400E59561 /* Path+CoreDataProperties.m */; };
 		45202C541D145A1400E59561 /* Path.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C521D145A1400E59561 /* Path.m */; };
+		45202C571D14A3FF00E59561 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C561D14A3FF00E59561 /* Reachability.m */; };
 		A9DAA76C6973FA31B5C042AA /* libPods-GEtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30F23D1207BCBCD3FA21FE9D /* libPods-GEtest.a */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,8 @@
 		45202C501D145A1400E59561 /* Path+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Path+CoreDataProperties.m"; sourceTree = "<group>"; };
 		45202C511D145A1400E59561 /* Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Path.h; sourceTree = "<group>"; };
 		45202C521D145A1400E59561 /* Path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Path.m; sourceTree = "<group>"; };
+		45202C551D14A3FF00E59561 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		45202C561D14A3FF00E59561 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		F2571D48688544A44351F1B3 /* Pods-GEtest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GEtest.release.xcconfig"; path = "Pods/Target Support Files/Pods-GEtest/Pods-GEtest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -195,6 +198,7 @@
 		45202C371D1447DB00E59561 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				45202C581D14A40600E59561 /* Reachability */,
 				45202C361D1447C600E59561 /* UIImageView+UIActivityIndicatorForSDWebImage */,
 			);
 			name = Utilities;
@@ -285,6 +289,15 @@
 				45202C4C1D14545A00E59561 /* PathDataService.m */,
 			);
 			name = DataServices;
+			sourceTree = "<group>";
+		};
+		45202C581D14A40600E59561 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				45202C551D14A3FF00E59561 /* Reachability.h */,
+				45202C561D14A3FF00E59561 /* Reachability.m */,
+			);
+			name = Reachability;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -471,6 +484,7 @@
 				45202C541D145A1400E59561 /* Path.m in Sources */,
 				45202C531D145A1400E59561 /* Path+CoreDataProperties.m in Sources */,
 				45202C051D14445200E59561 /* ViewController.m in Sources */,
+				45202C571D14A3FF00E59561 /* Reachability.m in Sources */,
 				45202C461D144BC900E59561 /* APIService.m in Sources */,
 				45202C021D14445200E59561 /* AppDelegate.m in Sources */,
 				45202C421D144B4500E59561 /* HttpSessionManager.m in Sources */,

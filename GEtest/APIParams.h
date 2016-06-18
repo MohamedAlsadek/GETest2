@@ -16,6 +16,14 @@ typedef NS_ENUM(NSUInteger, TravelMode) {
     TravelModeBus
 };
 
+#pragma mark - Path Sorting Types
+typedef NS_ENUM(NSUInteger, PathSorting) {
+    PathSortingDepartureTime,
+    PathSortingArrivalTime,
+    PathSortingDuration
+};
+
+
 #pragma mark - URL pathes
 static NSString* const kBaseURL             = @"https://api.myjson.com/bins";
 static NSString* const kURLFlight           = @"/w60i";
