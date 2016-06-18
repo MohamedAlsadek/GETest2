@@ -28,6 +28,7 @@ static NSString *kButtonCancel = @"Cancel";
 
 @property (nonatomic, strong) ArrayDataSource *pathListDataSource;
 @property (nonatomic, strong) PathListViewModel *viewModel;
+@property (nonatomic, strong) JGActionSheet *sheet;
 @property (weak, nonatomic) IBOutlet UITableView *tableViewPathes;
 @property (weak, nonatomic) IBOutlet UIView *footerView;
 
@@ -49,8 +50,7 @@ static NSString *kButtonCancel = @"Cancel";
     _viewModel = [[PathListViewModel alloc] initWithTravelMode:self.travelMode delegate:self];
     [_viewModel fetchDataForTravelMode:self.travelMode sortingType:PathSortingDepartureTime];
     
-    // configure tableview delegate and datasource
-    self.tableViewPathes.delegate = self;
+    // configure tableview datasource
     [self initTableViewDataSource];
     self.tableViewPathes.tableFooterView = [UIView new];
     [self.tableViewPathes setContentInset:UIEdgeInsetsMake(0, 0, self.footerView.frame.size.height, 0)];
@@ -91,22 +91,27 @@ static NSString *kButtonCancel = @"Cancel";
 
 #pragma mark - Filter
 - (void)showFilter {
-    
-    JGActionSheetSection *section1 = [JGActionSheetSection sectionWithTitle:kActionSheetTitle message:kActionSheetMessage buttonTitles:@[kActionSheetOption1, kActionSheetOption2, kActionSheetOption3] buttonStyle:JGActionSheetButtonStyleDefault];
-    JGActionSheetSection *cancelSection = [JGActionSheetSection sectionWithTitle:nil message:nil buttonTitles:@[kButtonCancel] buttonStyle:JGActionSheetButtonStyleCancel];
-    
-    NSArray *sections = @[section1, cancelSection];
-    
-    JGActionSheet *sheet = [JGActionSheet actionSheetWithSections:sections];
-    
-    [sheet setButtonPressedBlock:^(JGActionSheet *sheet, NSIndexPath *indexPath) {
+
+    if (!self.sheet) {
         
-        [self.viewModel fetchDataForTravelMode:self.travelMode sortingType:indexPath.row];
+        __weak __typeof(self)weakSelf = self;
         
-        [sheet dismissAnimated:YES];
-    }];
+        JGActionSheetSection *section1 = [JGActionSheetSection sectionWithTitle:kActionSheetTitle message:kActionSheetMessage buttonTitles:@[kActionSheetOption1, kActionSheetOption2, kActionSheetOption3] buttonStyle:JGActionSheetButtonStyleDefault];
+        JGActionSheetSection *cancelSection = [JGActionSheetSection sectionWithTitle:nil message:nil buttonTitles:@[kButtonCancel] buttonStyle:JGActionSheetButtonStyleCancel];
+        
+        NSArray *sections = @[section1, cancelSection];
+        
+        self.sheet = [JGActionSheet actionSheetWithSections:sections];
+        
+        [self.sheet setButtonPressedBlock:^(JGActionSheet *sheet, NSIndexPath *indexPath) {
+            
+            [weakSelf.viewModel fetchDataForTravelMode:weakSelf.travelMode sortingType:indexPath.row];
+            
+            [sheet dismissAnimated:YES];
+        }];
+    }
     
-    [sheet showInView:self.view animated:YES];
+    [self.sheet showInView:self.view animated:YES];
 }
 
 #pragma mark - Memory Warning
