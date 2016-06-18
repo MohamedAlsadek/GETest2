@@ -19,6 +19,7 @@ static NSString *kCellIdentifier = @"PathListTableViewCell";
 @property (nonatomic, strong) ArrayDataSource *pathListDataSource;
 @property (nonatomic, strong) PathListViewModel *viewModel;
 @property (weak, nonatomic) IBOutlet UITableView *tableViewPathes;
+@property (weak, nonatomic) IBOutlet UIView *footerView;
 
 @end
 
@@ -42,7 +43,13 @@ static NSString *kCellIdentifier = @"PathListTableViewCell";
     self.tableViewPathes.delegate = self;
     [self initTableViewDataSource];
     self.tableViewPathes.tableFooterView = [UIView new];
+    [self.tableViewPathes setContentInset:UIEdgeInsetsMake(0, 0, self.footerView.frame.size.height, 0)];
     
+    // init footerview
+    UITapGestureRecognizer *tagGesture =
+    [[UITapGestureRecognizer alloc] initWithTarget:self
+                                            action:@selector(showFilter)];
+    [self.footerView addGestureRecognizer:tagGesture];
 }
 
 #pragma mark - Table view data source
@@ -78,6 +85,13 @@ static NSString *kCellIdentifier = @"PathListTableViewCell";
         self.pathListDataSource.items = self.viewModel.allPathes ;
         [self.tableViewPathes reloadData] ;
     });
+}
+
+#pragma mark - Filter
+- (void)showFilter {
+    
+    NSLog(@"Filter");
+    
 }
 
 #pragma mark - Memory Warning
