@@ -20,10 +20,7 @@ typedef void(^DataSuccessBlock)(id result);
 
 @interface PathDataService : NSObject
 
-/*!
- *@abstract This method get travel mode pathes from server/offline
- */
-
+// This method get travel mode pathes from server/offline
 - (void)getTravelOptionsForTravelMode:(TravelMode)travelMode Success:(DataSuccessBlock)success failure:(DataFailureBlock)failure;
 
 @end

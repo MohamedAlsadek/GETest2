@@ -208,7 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				45202C371D1447DB00E59561 /* Utilities */,
-				45202C3D1D14483A00E59561 /* Common */,
+				45202C601D14D95400E59561 /* Constants */,
 				45202C3C1D14483100E59561 /* Services */,
 				45202C3E1D14487100E59561 /* UI */,
 			);
@@ -242,13 +242,6 @@
 			name = Services;
 			sourceTree = "<group>";
 		};
-		45202C3D1D14483A00E59561 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Common;
-			sourceTree = "<group>";
-		};
 		45202C3E1D14487100E59561 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,7 +266,6 @@
 		45202C471D14531F00E59561 /* APIService */ = {
 			isa = PBXGroup;
 			children = (
-				45202C431D144B6400E59561 /* APIParams.h */,
 				45202C401D144B4500E59561 /* HttpSessionManager.h */,
 				45202C411D144B4500E59561 /* HttpSessionManager.m */,
 				45202C441D144BC900E59561 /* APIService.h */,
@@ -298,6 +290,14 @@
 				45202C561D14A3FF00E59561 /* Reachability.m */,
 			);
 			name = Reachability;
+			sourceTree = "<group>";
+		};
+		45202C601D14D95400E59561 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				45202C431D144B6400E59561 /* APIParams.h */,
+			);
+			name = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
