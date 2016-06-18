@@ -10,11 +10,21 @@
 #import "PathListTableViewCell.h"
 #import "ArrayDataSource.h"
 #import "PathListViewModel.h"
+#import <JGActionSheet/JGActionSheet.h>
 
 
 static NSString *kCellIdentifier = @"PathListTableViewCell";
 
-@interface PathListViewController () <UITableViewDelegate>
+// ActionSheet
+static NSString *kActionSheetTitle = @"Filter";
+static NSString *kActionSheetMessage = @"arrange the list according to the follwing creterias";
+static NSString *kActionSheetOption1 = @"Departure Time";
+static NSString *kActionSheetOption2 = @"Arrival Time";
+static NSString *kActionSheetOption3 = @"Path Duration";
+static NSString *kButtonCancel = @"Cancel";
+
+
+@interface PathListViewController ()
 
 @property (nonatomic, strong) ArrayDataSource *pathListDataSource;
 @property (nonatomic, strong) PathListViewModel *viewModel;
@@ -66,14 +76,6 @@ static NSString *kCellIdentifier = @"PathListTableViewCell";
     self.tableViewPathes.dataSource = self.pathListDataSource ;
 }
 
-#pragma mark - Table view delegate
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    NSLog(@"notify user that the feature not implemented ");
-}
-
-
-
 #pragma mark - Update UI
 - (void) updateUI {
 //    [self hideLoadingIndicator];
@@ -90,8 +92,21 @@ static NSString *kCellIdentifier = @"PathListTableViewCell";
 #pragma mark - Filter
 - (void)showFilter {
     
-    NSLog(@"Filter");
+    JGActionSheetSection *section1 = [JGActionSheetSection sectionWithTitle:kActionSheetTitle message:kActionSheetMessage buttonTitles:@[kActionSheetOption1, kActionSheetOption2, kActionSheetOption3] buttonStyle:JGActionSheetButtonStyleDefault];
+    JGActionSheetSection *cancelSection = [JGActionSheetSection sectionWithTitle:nil message:nil buttonTitles:@[kButtonCancel] buttonStyle:JGActionSheetButtonStyleCancel];
     
+    NSArray *sections = @[section1, cancelSection];
+    
+    JGActionSheet *sheet = [JGActionSheet actionSheetWithSections:sections];
+    
+    [sheet setButtonPressedBlock:^(JGActionSheet *sheet, NSIndexPath *indexPath) {
+        
+        [self.viewModel fetchDataForTravelMode:self.travelMode sortingType:indexPath.row];
+        
+        [sheet dismissAnimated:YES];
+    }];
+    
+    [sheet showInView:self.view animated:YES];
 }
 
 #pragma mark - Memory Warning

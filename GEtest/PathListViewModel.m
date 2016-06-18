@@ -50,6 +50,12 @@
 
 - (void)fetchDataForTravelMode:(TravelMode)travelMode sortingType:(PathSorting)pathSorting {
     
+    // if the list is available only apply the new sorting.
+    if (self.allPathes) {
+        self.allPathes = [NSArray sortPathes:self.allPathes :pathSorting];
+        return;
+    }
+    
     [self.pathDataService getTravelOptionsForTravelMode:travelMode Success:^(id result) {
         
         NSArray *tempResult = (NSArray *)result;

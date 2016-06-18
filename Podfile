@@ -6,5 +6,6 @@ target 'GEtest' do
 
 pod 'AFNetworking', '~> 3.0'
 pod 'SDWebImage'
+pod 'JGActionSheet'
 
 end

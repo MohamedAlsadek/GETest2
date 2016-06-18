@@ -40,7 +40,7 @@
                 
             case PathSortingDuration:{
                 firstParam = [Path calculatePathDuration:firstObj];
-                secondParam = [Path calculatePathDuration:firstObj];
+                secondParam = [Path calculatePathDuration:secondObj];
             }
                 break;
                 

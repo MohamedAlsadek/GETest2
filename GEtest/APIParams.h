@@ -18,7 +18,7 @@ typedef NS_ENUM(NSUInteger, TravelMode) {
 
 #pragma mark - Path Sorting Types
 typedef NS_ENUM(NSUInteger, PathSorting) {
-    PathSortingDepartureTime,
+    PathSortingDepartureTime = 0,
     PathSortingArrivalTime,
     PathSortingDuration
 };
