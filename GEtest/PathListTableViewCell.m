@@ -24,13 +24,21 @@
 
 
 - (void)initCellWithPath:(Path *)path {
-    
-    NSNumber *pathDuration = [Path calculatePathDuration:path];
-    self.labelDuration.text = [NSString stringWithFormat:@"%@ h", [NSString stringFromTimeInterval:pathDuration.floatValue]];
-    
     self.labelStartEndTime.text = [NSString stringWithFormat:@"%@ - %@", path.departureTime, path.arrivalTime];
+    [self setDurationLabelWithObject:path];
     [self setPriceLabelWithObject:path];
     [self setLogoWithObject:path];
+}
+
+- (void)setDurationLabelWithObject:(Path *)path {
+    
+    NSNumber *pathDuration = [Path calculatePathDuration:path];
+    NSString *formattedDuration = [NSString stringWithFormat:@"%@ h", [NSString stringFromTimeInterval:pathDuration.floatValue]];
+    if (path.numberOfStops == 0) {
+        self.labelDuration.text = [NSString stringWithFormat:@"Direct %@" , formattedDuration];
+    }else {
+        self.labelDuration.text = formattedDuration;
+    }
 }
 
 - (void)setPriceLabelWithObject:(Path *)path {
