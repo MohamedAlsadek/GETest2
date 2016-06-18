@@ -82,7 +82,11 @@ static NSString *kButtonCancel = @"Cancel";
 #pragma mark - Update UI
 - (void) updateUI {
     [self hideLoadingIndicator];
-    [self addTapGesutreOnFooterView]; // to enable filtring 
+    
+    if (self.viewModel.allPathes.count > 0) {
+        [self addTapGesutreOnFooterView]; // to enable filtring
+    }
+    
     [self reloadTableViewOnMainThread];
 }
 
@@ -108,8 +112,10 @@ static NSString *kButtonCancel = @"Cancel";
         self.sheet = [JGActionSheet actionSheetWithSections:sections];
         
         [self.sheet setButtonPressedBlock:^(JGActionSheet *sheet, NSIndexPath *indexPath) {
-
-            [weakSelf.viewModel fetchDataForTravelMode:weakSelf.travelMode sortingType:indexPath.row];
+            
+            if (indexPath.section == 0) {
+                [weakSelf.viewModel fetchDataForTravelMode:weakSelf.travelMode sortingType:indexPath.row];
+            }
             
             [sheet dismissAnimated:YES];
         }];
