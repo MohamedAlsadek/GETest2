@@ -49,7 +49,15 @@ static NSString* const kPathNumberOfStops   = @"number_of_stops";
     Path *path;
     if (parsedItem) {
         NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Path"];
-        request.predicate = [NSPredicate predicateWithFormat:@"pathId = %@", parsedItem[@"id"]];
+        
+        
+        NSPredicate *predicate1 = [NSPredicate predicateWithFormat:@"pathId = %@", parsedItem[@"id"]];
+        NSPredicate *predicate2 = [NSPredicate predicateWithFormat:@"travelMode = %@", [Path getTravelModeString:travelMode]];
+                                                              
+        NSPredicate *compoundPredicate
+        = [NSCompoundPredicate andPredicateWithSubpredicates:@[predicate1, predicate2]];
+
+        request.predicate = compoundPredicate;
         NSError *error;
         NSArray *matches = [context executeFetchRequest:request error:&error];
         

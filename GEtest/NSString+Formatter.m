@@ -11,7 +11,7 @@
 @implementation NSString (Formatter)
 
 
-- (NSString *)stringFromTimeInterval:(NSTimeInterval)interval {
++ (NSString *)stringFromTimeInterval:(NSTimeInterval)interval {
 
     NSInteger ti = (NSInteger)interval;
     NSInteger minutes = (ti / 60) % 60;

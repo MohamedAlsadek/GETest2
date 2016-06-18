@@ -31,6 +31,8 @@
 		45202C7E1D1587E900E59561 /* PathListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C7D1D1587E900E59561 /* PathListViewModel.m */; };
 		45202C811D158B3C00E59561 /* NSArray+SortPaths.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C801D158B3C00E59561 /* NSArray+SortPaths.m */; };
 		45202C851D158BDD00E59561 /* NSString+Formatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C841D158BDD00E59561 /* NSString+Formatter.m */; };
+		45202C881D159A0F00E59561 /* PathListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C871D159A0F00E59561 /* PathListTableViewCell.m */; };
+		45202C8C1D159C7200E59561 /* ArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C8B1D159C7200E59561 /* ArrayDataSource.m */; };
 		A9DAA76C6973FA31B5C042AA /* libPods-GEtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30F23D1207BCBCD3FA21FE9D /* libPods-GEtest.a */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +105,10 @@
 		45202C801D158B3C00E59561 /* NSArray+SortPaths.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SortPaths.m"; sourceTree = "<group>"; };
 		45202C831D158BDD00E59561 /* NSString+Formatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Formatter.h"; sourceTree = "<group>"; };
 		45202C841D158BDD00E59561 /* NSString+Formatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Formatter.m"; sourceTree = "<group>"; };
+		45202C861D159A0F00E59561 /* PathListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathListTableViewCell.h; sourceTree = "<group>"; };
+		45202C871D159A0F00E59561 /* PathListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathListTableViewCell.m; sourceTree = "<group>"; };
+		45202C8A1D159C7200E59561 /* ArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayDataSource.h; sourceTree = "<group>"; };
+		45202C8B1D159C7200E59561 /* ArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayDataSource.m; sourceTree = "<group>"; };
 		F2571D48688544A44351F1B3 /* Pods-GEtest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GEtest.release.xcconfig"; path = "Pods/Target Support Files/Pods-GEtest/Pods-GEtest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -227,6 +233,7 @@
 				45202C661D14DA5D00E59561 /* CAPSPageMenu */,
 				45202C581D14A40600E59561 /* Reachability */,
 				45202C361D1447C600E59561 /* UIImageView+UIActivityIndicatorForSDWebImage */,
+				45202C8D1D159C7700E59561 /* CustomTableViewDatasource */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -279,6 +286,7 @@
 			children = (
 				45202C3B1D14481300E59561 /* Storyboards */,
 				45202C3A1D14480A00E59561 /* ViewControllers */,
+				45202C891D159C2A00E59561 /* TableViewCells */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -388,6 +396,24 @@
 				45202C841D158BDD00E59561 /* NSString+Formatter.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		45202C891D159C2A00E59561 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				45202C861D159A0F00E59561 /* PathListTableViewCell.h */,
+				45202C871D159A0F00E59561 /* PathListTableViewCell.m */,
+			);
+			name = TableViewCells;
+			sourceTree = "<group>";
+		};
+		45202C8D1D159C7700E59561 /* CustomTableViewDatasource */ = {
+			isa = PBXGroup;
+			children = (
+				45202C8A1D159C7200E59561 /* ArrayDataSource.h */,
+				45202C8B1D159C7200E59561 /* ArrayDataSource.m */,
+			);
+			name = CustomTableViewDatasource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -582,6 +608,7 @@
 				45202C461D144BC900E59561 /* APIService.m in Sources */,
 				45202C021D14445200E59561 /* AppDelegate.m in Sources */,
 				45202C421D144B4500E59561 /* HttpSessionManager.m in Sources */,
+				45202C881D159A0F00E59561 /* PathListTableViewCell.m in Sources */,
 				45202C851D158BDD00E59561 /* NSString+Formatter.m in Sources */,
 				45202C4D1D14545A00E59561 /* PathDataService.m in Sources */,
 				45202C691D14DB1C00E59561 /* AbstractNavigationController.m in Sources */,
@@ -589,6 +616,7 @@
 				45202C6E1D157CA800E59561 /* AbstractPagerViewController.m in Sources */,
 				45202C351D1447C200E59561 /* UIImageView+UIActivityIndicatorForSDWebImage.m in Sources */,
 				45202BFF1D14445200E59561 /* main.m in Sources */,
+				45202C8C1D159C7200E59561 /* ArrayDataSource.m in Sources */,
 				45202C0B1D14445200E59561 /* GEtest.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

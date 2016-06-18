@@ -11,6 +11,6 @@
 @interface NSString (Formatter)
 
 // Format NSTimeInterval to hh:mm
-- (NSString *)stringFromTimeInterval:(NSTimeInterval)interval;
++ (NSString *)stringFromTimeInterval:(NSTimeInterval)interval;
 
 @end

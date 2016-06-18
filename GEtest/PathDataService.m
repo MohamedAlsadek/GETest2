@@ -49,7 +49,6 @@
         failure(errorMsg);
         
     }];
-    
 }
 
 - (void)getOfflineTravelOptionsForTravelMode:(TravelMode)travelMode Success:(DataSuccessBlock)success failure:(DataFailureBlock)failure {
