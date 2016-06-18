@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		45202BFF1D14445200E59561 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202BFE1D14445200E59561 /* main.m */; };
 		45202C021D14445200E59561 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C011D14445200E59561 /* AppDelegate.m */; };
-		45202C051D14445200E59561 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C041D14445200E59561 /* ViewController.m */; };
 		45202C081D14445200E59561 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45202C061D14445200E59561 /* Main.storyboard */; };
 		45202C0B1D14445200E59561 /* GEtest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45202C091D14445200E59561 /* GEtest.xcdatamodeld */; };
 		45202C0D1D14445200E59561 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45202C0C1D14445200E59561 /* Assets.xcassets */; };
@@ -26,6 +25,9 @@
 		45202C621D14DA2B00E59561 /* sampleoutput@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45202C611D14DA2B00E59561 /* sampleoutput@2x.png */; };
 		45202C651D14DA5300E59561 /* CAPSPageMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C641D14DA5300E59561 /* CAPSPageMenu.m */; };
 		45202C691D14DB1C00E59561 /* AbstractNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C681D14DB1C00E59561 /* AbstractNavigationController.m */; };
+		45202C6E1D157CA800E59561 /* AbstractPagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C6D1D157CA800E59561 /* AbstractPagerViewController.m */; };
+		45202C721D157D3A00E59561 /* PagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C711D157D3A00E59561 /* PagerViewController.m */; };
+		45202C751D157EAA00E59561 /* PathListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C741D157EAA00E59561 /* PathListViewController.m */; };
 		A9DAA76C6973FA31B5C042AA /* libPods-GEtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30F23D1207BCBCD3FA21FE9D /* libPods-GEtest.a */; };
 /* End PBXBuildFile section */
 
@@ -53,8 +55,6 @@
 		45202BFE1D14445200E59561 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		45202C001D14445200E59561 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		45202C011D14445200E59561 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		45202C031D14445200E59561 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		45202C041D14445200E59561 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		45202C071D14445200E59561 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		45202C0A1D14445200E59561 /* GEtest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GEtest.xcdatamodel; sourceTree = "<group>"; };
 		45202C0C1D14445200E59561 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,6 +86,14 @@
 		45202C641D14DA5300E59561 /* CAPSPageMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAPSPageMenu.m; sourceTree = "<group>"; };
 		45202C671D14DB1C00E59561 /* AbstractNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractNavigationController.h; sourceTree = "<group>"; };
 		45202C681D14DB1C00E59561 /* AbstractNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractNavigationController.m; sourceTree = "<group>"; };
+		45202C6B1D157BA800E59561 /* Contants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Contants.h; sourceTree = "<group>"; };
+		45202C6C1D157CA800E59561 /* AbstractPagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractPagerViewController.h; sourceTree = "<group>"; };
+		45202C6D1D157CA800E59561 /* AbstractPagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractPagerViewController.m; sourceTree = "<group>"; };
+		45202C701D157D3A00E59561 /* PagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagerViewController.h; sourceTree = "<group>"; };
+		45202C711D157D3A00E59561 /* PagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagerViewController.m; sourceTree = "<group>"; };
+		45202C731D157EAA00E59561 /* PathListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathListViewController.h; sourceTree = "<group>"; };
+		45202C741D157EAA00E59561 /* PathListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathListViewController.m; sourceTree = "<group>"; };
+		45202C7A1D15803E00E59561 /* ViewModelUpdateUIDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewModelUpdateUIDelegate.h; sourceTree = "<group>"; };
 		F2571D48688544A44351F1B3 /* Pods-GEtest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GEtest.release.xcconfig"; path = "Pods/Target Support Files/Pods-GEtest/Pods-GEtest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -220,6 +228,7 @@
 				45202C371D1447DB00E59561 /* Utilities */,
 				45202C601D14D95400E59561 /* Constants */,
 				45202C3C1D14483100E59561 /* Services */,
+				45202C7B1D15807300E59561 /* ViewModels */,
 				45202C3E1D14487100E59561 /* UI */,
 			);
 			name = Classes;
@@ -228,9 +237,11 @@
 		45202C3A1D14480A00E59561 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				45202C6A1D14DB2200E59561 /* NavigationController */,
-				45202C031D14445200E59561 /* ViewController.h */,
-				45202C041D14445200E59561 /* ViewController.m */,
+				45202C6F1D157CFB00E59561 /* AbstractPagerViewController */,
+				45202C6A1D14DB2200E59561 /* AbstractNavigationController */,
+				45202C791D157F9500E59561 /* ParentPager */,
+				45202C731D157EAA00E59561 /* PathListViewController.h */,
+				45202C741D157EAA00E59561 /* PathListViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -307,6 +318,7 @@
 			isa = PBXGroup;
 			children = (
 				45202C431D144B6400E59561 /* APIParams.h */,
+				45202C6B1D157BA800E59561 /* Contants.h */,
 			);
 			name = Constants;
 			sourceTree = "<group>";
@@ -320,13 +332,39 @@
 			name = CAPSPageMenu;
 			sourceTree = "<group>";
 		};
-		45202C6A1D14DB2200E59561 /* NavigationController */ = {
+		45202C6A1D14DB2200E59561 /* AbstractNavigationController */ = {
 			isa = PBXGroup;
 			children = (
 				45202C671D14DB1C00E59561 /* AbstractNavigationController.h */,
 				45202C681D14DB1C00E59561 /* AbstractNavigationController.m */,
 			);
-			name = NavigationController;
+			name = AbstractNavigationController;
+			sourceTree = "<group>";
+		};
+		45202C6F1D157CFB00E59561 /* AbstractPagerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				45202C6C1D157CA800E59561 /* AbstractPagerViewController.h */,
+				45202C6D1D157CA800E59561 /* AbstractPagerViewController.m */,
+			);
+			name = AbstractPagerViewController;
+			sourceTree = "<group>";
+		};
+		45202C791D157F9500E59561 /* ParentPager */ = {
+			isa = PBXGroup;
+			children = (
+				45202C701D157D3A00E59561 /* PagerViewController.h */,
+				45202C711D157D3A00E59561 /* PagerViewController.m */,
+			);
+			name = ParentPager;
+			sourceTree = "<group>";
+		};
+		45202C7B1D15807300E59561 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				45202C7A1D15803E00E59561 /* ViewModelUpdateUIDelegate.h */,
+			);
+			name = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -512,15 +550,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				45202C541D145A1400E59561 /* Path.m in Sources */,
+				45202C721D157D3A00E59561 /* PagerViewController.m in Sources */,
 				45202C531D145A1400E59561 /* Path+CoreDataProperties.m in Sources */,
 				45202C651D14DA5300E59561 /* CAPSPageMenu.m in Sources */,
-				45202C051D14445200E59561 /* ViewController.m in Sources */,
 				45202C571D14A3FF00E59561 /* Reachability.m in Sources */,
 				45202C461D144BC900E59561 /* APIService.m in Sources */,
 				45202C021D14445200E59561 /* AppDelegate.m in Sources */,
 				45202C421D144B4500E59561 /* HttpSessionManager.m in Sources */,
 				45202C4D1D14545A00E59561 /* PathDataService.m in Sources */,
 				45202C691D14DB1C00E59561 /* AbstractNavigationController.m in Sources */,
+				45202C751D157EAA00E59561 /* PathListViewController.m in Sources */,
+				45202C6E1D157CA800E59561 /* AbstractPagerViewController.m in Sources */,
 				45202C351D1447C200E59561 /* UIImageView+UIActivityIndicatorForSDWebImage.m in Sources */,
 				45202BFF1D14445200E59561 /* main.m in Sources */,
 				45202C0B1D14445200E59561 /* GEtest.xcdatamodeld in Sources */,

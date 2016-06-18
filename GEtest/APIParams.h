@@ -11,7 +11,7 @@
 
 #pragma mark - Filter Types
 typedef NS_ENUM(NSUInteger, TravelMode) {
-    TravelModeFlight,
+    TravelModeFlight = 0,
     TravelModeTrain,
     TravelModeBus
 };

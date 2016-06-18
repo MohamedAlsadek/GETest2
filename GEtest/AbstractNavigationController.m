@@ -7,6 +7,7 @@
 //
 
 #import "AbstractNavigationController.h"
+#import "Contants.h"
 
 @interface AbstractNavigationController ()
 
@@ -23,7 +24,7 @@
     self.navigationBar.shadowImage = [[UIImage alloc] init];
     
     self.navigationBarHidden = NO;
-    self.navigationBar.barTintColor = [UIColor colorWithRed:15.0/255.0 green:97.0/255.0 blue:163.0/255.0 alpha:1.0];
+    self.navigationBar.barTintColor = kAppBlueColor;
     self.navigationBar.tintColor = [UIColor whiteColor];
     self.navigationBar.translucent = NO;
     
