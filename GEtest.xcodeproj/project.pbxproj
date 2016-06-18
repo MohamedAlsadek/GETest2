@@ -23,6 +23,9 @@
 		45202C531D145A1400E59561 /* Path+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C501D145A1400E59561 /* Path+CoreDataProperties.m */; };
 		45202C541D145A1400E59561 /* Path.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C521D145A1400E59561 /* Path.m */; };
 		45202C571D14A3FF00E59561 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C561D14A3FF00E59561 /* Reachability.m */; };
+		45202C621D14DA2B00E59561 /* sampleoutput@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45202C611D14DA2B00E59561 /* sampleoutput@2x.png */; };
+		45202C651D14DA5300E59561 /* CAPSPageMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C641D14DA5300E59561 /* CAPSPageMenu.m */; };
+		45202C691D14DB1C00E59561 /* AbstractNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45202C681D14DB1C00E59561 /* AbstractNavigationController.m */; };
 		A9DAA76C6973FA31B5C042AA /* libPods-GEtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30F23D1207BCBCD3FA21FE9D /* libPods-GEtest.a */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +81,11 @@
 		45202C521D145A1400E59561 /* Path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Path.m; sourceTree = "<group>"; };
 		45202C551D14A3FF00E59561 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		45202C561D14A3FF00E59561 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		45202C611D14DA2B00E59561 /* sampleoutput@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sampleoutput@2x.png"; sourceTree = "<group>"; };
+		45202C631D14DA5300E59561 /* CAPSPageMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAPSPageMenu.h; sourceTree = "<group>"; };
+		45202C641D14DA5300E59561 /* CAPSPageMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAPSPageMenu.m; sourceTree = "<group>"; };
+		45202C671D14DB1C00E59561 /* AbstractNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractNavigationController.h; sourceTree = "<group>"; };
+		45202C681D14DB1C00E59561 /* AbstractNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractNavigationController.m; sourceTree = "<group>"; };
 		F2571D48688544A44351F1B3 /* Pods-GEtest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GEtest.release.xcconfig"; path = "Pods/Target Support Files/Pods-GEtest/Pods-GEtest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,6 +171,7 @@
 		45202BFD1D14445200E59561 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				45202C611D14DA2B00E59561 /* sampleoutput@2x.png */,
 				45202BFE1D14445200E59561 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -198,6 +207,7 @@
 		45202C371D1447DB00E59561 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				45202C661D14DA5D00E59561 /* CAPSPageMenu */,
 				45202C581D14A40600E59561 /* Reachability */,
 				45202C361D1447C600E59561 /* UIImageView+UIActivityIndicatorForSDWebImage */,
 			);
@@ -218,6 +228,7 @@
 		45202C3A1D14480A00E59561 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				45202C6A1D14DB2200E59561 /* NavigationController */,
 				45202C031D14445200E59561 /* ViewController.h */,
 				45202C041D14445200E59561 /* ViewController.m */,
 			);
@@ -298,6 +309,24 @@
 				45202C431D144B6400E59561 /* APIParams.h */,
 			);
 			name = Constants;
+			sourceTree = "<group>";
+		};
+		45202C661D14DA5D00E59561 /* CAPSPageMenu */ = {
+			isa = PBXGroup;
+			children = (
+				45202C631D14DA5300E59561 /* CAPSPageMenu.h */,
+				45202C641D14DA5300E59561 /* CAPSPageMenu.m */,
+			);
+			name = CAPSPageMenu;
+			sourceTree = "<group>";
+		};
+		45202C6A1D14DB2200E59561 /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				45202C671D14DB1C00E59561 /* AbstractNavigationController.h */,
+				45202C681D14DB1C00E59561 /* AbstractNavigationController.m */,
+			);
+			name = NavigationController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,6 +438,7 @@
 				45202C101D14445200E59561 /* LaunchScreen.storyboard in Resources */,
 				45202C0D1D14445200E59561 /* Assets.xcassets in Resources */,
 				45202C081D14445200E59561 /* Main.storyboard in Resources */,
+				45202C621D14DA2B00E59561 /* sampleoutput@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,12 +513,14 @@
 			files = (
 				45202C541D145A1400E59561 /* Path.m in Sources */,
 				45202C531D145A1400E59561 /* Path+CoreDataProperties.m in Sources */,
+				45202C651D14DA5300E59561 /* CAPSPageMenu.m in Sources */,
 				45202C051D14445200E59561 /* ViewController.m in Sources */,
 				45202C571D14A3FF00E59561 /* Reachability.m in Sources */,
 				45202C461D144BC900E59561 /* APIService.m in Sources */,
 				45202C021D14445200E59561 /* AppDelegate.m in Sources */,
 				45202C421D144B4500E59561 /* HttpSessionManager.m in Sources */,
 				45202C4D1D14545A00E59561 /* PathDataService.m in Sources */,
+				45202C691D14DB1C00E59561 /* AbstractNavigationController.m in Sources */,
 				45202C351D1447C200E59561 /* UIImageView+UIActivityIndicatorForSDWebImage.m in Sources */,
 				45202BFF1D14445200E59561 /* main.m in Sources */,
 				45202C0B1D14445200E59561 /* GEtest.xcdatamodeld in Sources */,

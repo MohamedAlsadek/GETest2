@@ -22,19 +22,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    PathDataService *dataService = [[PathDataService alloc] init];
+    [self setupUI];
     
-    [dataService getTravelOptionsForTravelMode:TravelModeFlight Success:^(id result) {
-        
-        Path *tempPath = ((NSArray *)result).firstObject;
-        NSLog(@"live : %@", tempPath);
+}
 
-    } failure:^(NSString *errorMsg) {
-        
-        NSLog(@"%@" , errorMsg);
-        
-    }];
-    
+#pragma mark - UI
+- (void)setupUI {
+    self.navigationItem.title = @"Berlin - Munich";
 }
 
 - (void)didReceiveMemoryWarning {
