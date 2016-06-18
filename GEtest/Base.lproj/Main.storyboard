@@ -36,6 +36,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ExJ-Xp-4d8">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                            </activityIndicatorView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="86" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y6f-hX-Vzt">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -128,15 +131,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="9cF-CS-6Qw" firstAttribute="top" secondItem="d7f-kU-kNa" secondAttribute="bottom" id="Fzg-GR-vfT"/>
+                            <constraint firstItem="ExJ-Xp-4d8" firstAttribute="centerY" secondItem="sb9-jT-BiC" secondAttribute="centerY" id="NVe-10-6m2"/>
                             <constraint firstItem="y6f-hX-Vzt" firstAttribute="top" secondItem="sb9-jT-BiC" secondAttribute="top" id="REy-Xz-umn"/>
                             <constraint firstAttribute="trailing" secondItem="d7f-kU-kNa" secondAttribute="trailing" id="X6n-BO-rub"/>
                             <constraint firstItem="y6f-hX-Vzt" firstAttribute="leading" secondItem="sb9-jT-BiC" secondAttribute="leading" id="ekt-X7-tCE"/>
                             <constraint firstAttribute="trailing" secondItem="y6f-hX-Vzt" secondAttribute="trailing" id="iN0-hh-nHW"/>
                             <constraint firstItem="9cF-CS-6Qw" firstAttribute="top" secondItem="y6f-hX-Vzt" secondAttribute="bottom" id="juR-BE-N8d"/>
                             <constraint firstItem="d7f-kU-kNa" firstAttribute="leading" secondItem="sb9-jT-BiC" secondAttribute="leading" id="qmH-lT-xQg"/>
+                            <constraint firstItem="ExJ-Xp-4d8" firstAttribute="centerX" secondItem="sb9-jT-BiC" secondAttribute="centerX" id="taj-yp-upn"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="ExJ-Xp-4d8" id="lHC-fo-9dc"/>
                         <outlet property="footerView" destination="d7f-kU-kNa" id="i0n-3G-JeD"/>
                         <outlet property="tableViewPathes" destination="y6f-hX-Vzt" id="2zR-kS-P5n"/>
                     </connections>

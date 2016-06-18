@@ -31,6 +31,7 @@ static NSString *kButtonCancel = @"Cancel";
 @property (nonatomic, strong) JGActionSheet *sheet;
 @property (weak, nonatomic) IBOutlet UITableView *tableViewPathes;
 @property (weak, nonatomic) IBOutlet UIView *footerView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
 
@@ -45,6 +46,7 @@ static NSString *kButtonCancel = @"Cancel";
 
 #pragma mark - UI
 - (void)setupUI {
+    [self showLoadingIndicator];
     
     // init view model
     _viewModel = [[PathListViewModel alloc] initWithTravelMode:self.travelMode delegate:self];
@@ -54,8 +56,9 @@ static NSString *kButtonCancel = @"Cancel";
     [self initTableViewDataSource];
     self.tableViewPathes.tableFooterView = [UIView new];
     [self.tableViewPathes setContentInset:UIEdgeInsetsMake(0, 0, self.footerView.frame.size.height, 0)];
-    
-    // init footerview
+}
+
+- (void)addTapGesutreOnFooterView {
     UITapGestureRecognizer *tagGesture =
     [[UITapGestureRecognizer alloc] initWithTarget:self
                                             action:@selector(showFilter)];
@@ -78,7 +81,8 @@ static NSString *kButtonCancel = @"Cancel";
 
 #pragma mark - Update UI
 - (void) updateUI {
-//    [self hideLoadingIndicator];
+    [self hideLoadingIndicator];
+    [self addTapGesutreOnFooterView]; // to enable filtring 
     [self reloadTableViewOnMainThread];
 }
 
@@ -104,7 +108,7 @@ static NSString *kButtonCancel = @"Cancel";
         self.sheet = [JGActionSheet actionSheetWithSections:sections];
         
         [self.sheet setButtonPressedBlock:^(JGActionSheet *sheet, NSIndexPath *indexPath) {
-            
+
             [weakSelf.viewModel fetchDataForTravelMode:weakSelf.travelMode sortingType:indexPath.row];
             
             [sheet dismissAnimated:YES];
@@ -121,6 +125,15 @@ static NSString *kButtonCancel = @"Cancel";
 }
 
 
+#pragma mark - Loading Indicator 
+- (void)showLoadingIndicator {
+    self.activityIndicator.hidden = NO;
+    [self.activityIndicator startAnimating];
+}
 
+- (void)hideLoadingIndicator {
+    self.activityIndicator.hidden = YES;
+    [self.activityIndicator stopAnimating];
+}
 
 @end
