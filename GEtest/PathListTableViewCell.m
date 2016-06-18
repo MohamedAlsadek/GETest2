@@ -56,10 +56,10 @@
     
     NSNumber *pathDuration = [Path calculatePathDuration:path];
     NSString *formattedDuration = [NSString stringWithFormat:@"%@ h", [NSString stringFromTimeInterval:pathDuration.floatValue]];
-    if (path.numberOfStops == 0) {
+    if (path.numberOfStops.intValue == 0) {
         self.labelDuration.text = [NSString stringWithFormat:@"Direct %@" , formattedDuration];
     }else {
-        self.labelDuration.text = formattedDuration;
+        self.labelDuration.text = [NSString stringWithFormat:@"(%@ stops) %@" , path.numberOfStops, formattedDuration];
     }
 }
 
